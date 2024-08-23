@@ -5,8 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website - HTML</title>
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 <body>
+  <div>
   <h1>Carlos Jimenez Zepeda <img src="./images/11_UP_GDL_CarlosJimenez_FF.png" alt="Picture of Carlos Jimenez Zepeda"></h1>
   <p>
     <b>Student</b><br/>
@@ -32,25 +34,29 @@
   </p>
 
   <hr/>
-
+  </div>
+  <div>
   <h2>Background</h2>
 
   <p>I'm from Guadalajara and I want be a billioner</p>
 
   <hr/>
 
+  </div>
+  <div>
   <h2>Education</h2>
 
   <ul>
-    <li><a href="https://alemangdl.edu.mx/kindergarten-esp/"><b>Kindergarten #43</b><em>  (2004-2007)</em><img src="./images/kinder.png" alt="Logo Kindergarten"></a> </li>
-    <li><a href="https://institutoignacioallende.com.mx/"><b>Instituto Ignacio Allende (Elementary School)</b><em>  (2007-2013)</em> <img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
-    <li><a href="https://institutoignacioallende.com.mx/"><b>Instituto Ignacio Allende (Middle School)</b><em>  (2013-2016)</em><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
-    <li><a href="https://uvm.mx/la-uvm/campus/guadalajara-sur"><b>Universidad del Valle de México (High School)</b><em>  (2016-2019)</em> <img src="./images/uvm.png" alt="Logo UVM"></a></li> <!--Con alt ayudamos a decidr que deberia haber y ayuda a la accesibilidad--><!--Se muestra una ruta relativa a mi website, es una mejor practica que los absolutos-->
-    <li><a href="https://www.up.edu.mx/"><b>Universidad Panamericana (University)</b><i>  (2019-..)</i><img src="./images/UP.png" alt="Logo Universidad Panamericana"></a></li>
+    <li><b>Kindergarten #43</b><em>  (2004-2007)</em><a href="https://alemangdl.edu.mx/kindergarten-esp/" target="_blank"><img src="./images/kinder.png" alt="Logo Kindergarten"></a> </li><!--El atributo style se puede usar en todos los tags de html, es el inline styling-->
+    <li><b>Instituto Ignacio Allende (Elementary School)</b><em>  (2007-2013)</em> <a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
+    <li><b>Instituto Ignacio Allende (Middle School)</b><em>  (2013-2016)</em><a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
+    <li><b>Universidad del Valle de México (High School)</b><em>  (2016-2019)</em><a href="https://uvm.mx/la-uvm/campus/guadalajara-sur" target="_blank"><img src="./images/uvm.png" alt="Logo UVM"></a></li> <!--Con alt ayudamos a decidr que deberia haber y ayuda a la accesibilidad--><!--Se muestra una ruta relativa a mi website, es una mejor practica que los absolutos-->
+    <li><b>Universidad Panamericana (University)</b><em>  (2019-..)</em><a href="https://www.up.edu.mx/" target="_blank"><img src="./images/UP.png" alt="Logo Universidad Panamericana"></a></li>
   </ul>
 
   <hr/>
-
+  </div>
+  <div>
   <h2>Skills</h2>
 
   <ol type="1" start="1"> <!--Listas desordenadas, el type cambia el tipo de numeración, start nos dice donde empezar-->
@@ -62,7 +68,8 @@
   </ol>
 
   <hr/>
-
+  </div>
+  <div>
   <h2>Hobbies</h2>
 
   <h3>Favorite food</h3>
@@ -111,7 +118,9 @@
   </ul>
 
   <hr/>
+  </div>
 
+  <div>
   <h2>Family birthdays</h2>
 
 
@@ -166,8 +175,9 @@
     </table>
 
     <hr/>
-
-    <h2><a href="./destination.html">My Favorite Spots</a></h2>
+    </div>
+    <div>
+    <h2><a href="./destination.html" target="_blank">My Favorite Spots</a></h2>
 
     <ul>
       <li><a href="./destination.html#Section-tokyo">Tokyo</a></li>
@@ -178,8 +188,9 @@
     </ul>
 
 
-    <hr/>
-
+    <hr/> 
+    </div>
+    <div>
     <h2>Heroes</h2>
 
     <table border="1">
@@ -240,7 +251,83 @@
       </tbody>
     </table>
 
+    <hr/>
+    </div>
+
+    <div>
+
+    <h2>Agenda</h2>
+
+    <table border="1">
+      <thead>
+        <th>Date</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Description</th>
+        <th>Place</th>
+        <th>Type</th>
+        <th>Notes</th>
+        <th>Flag</th>
+        <th>Free/busy</th>
+      </thead>
+    </table>
+
+    <br/>
+
+    <form action="#" method="POST"> <!--Es el unico tag que puede desencadenar algo que puede ser soportado por el backen, en el action debemos poner el endpoint que va a recibir los requests, puede ser url o un script local-->
+      <label for="event">Date: </label><br/><!--El method no dice que se va a hacer la mayori de veces es un get or post, la diferencia es la seguridad-->
+      <input type="date" name="date" /> 
+      <br/>
+      <br/>
+      <label for="time_start">Time start: </label><br/><!--Cuando creas un input siempre ponerle el tipo y el name sino no se manda-->
+      <input type="time" name="time_start"/><!--El post es mucho mas segiro que get-->
+      <br/>
+      <br/>
+      <label for="time_end">Time end: </label><br/>
+      <input type="time" name="time_end"/>
+      <br/>
+      <br/>
+      <label for="activity">Description: </label><br/>
+      <input type="text" name="activity" placeholder="activity"/> <!--value="New event" Se puede agregar adenrto-->
+      <br/>
+      <br/>
+      <label for="place">Place: </label><br/>
+      <input type="text" name="place"/>
+      <br/>
+      <br/>
+      <label for="type">Type: </label><br/>
+      <select name="type">
+        <option value="School">School</option>
+        <option value="Personal">Personal</option>
+        <option value="Profesional">Profesional</option>
+        <option value="Familiar">Familiar</option>
+        <option value="Other">Other</option>
+      </select>
+      <br/>
+      <br/>
+      <label for="notes">Notes: </label><br/>
+      <textarea name="notes" cols="40" rows="5">
+      </textarea>
+      <br/>
+      <br/>
+      <label for="flag">Flag: </label><br/>
+      <input type="color" name="flag"/>
+      <br/>
+      <br/>
+      <label>Select: </label><br/>
+      <input type="radio" name="free" value="Free">
+      <label for="free">Free</label>
+      <input type="radio" name="busy" value="Busy">
+      <label for="busy">Busy</label>
+      <br/>
+      <br/>
+      <input type="submit" value="Agregar"/><!--Este es el unico que activa todo en el form y es el unico obligatorio-->
+    </form>
+    
+    <br/>
+    </div>
   
+    <a href="#">Go to top</a>
     
 </body>
 </html>
