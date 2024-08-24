@@ -1,3 +1,29 @@
 body {
     margin: 0;
 }
+
+.red-container{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 479px;
+    left: 400px;
+}
+
+.blue-container{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    top: 279px;
+    
+}
+
+.yellow-container{
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
