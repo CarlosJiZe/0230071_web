@@ -1,3 +1,25 @@
 body {
   margin: 0;
 }
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+.country-image{
+  width: 550px;
+  height: 250px;
+}
+
+.country{
+  text-align: center;
+}
+
+.flags{
+  width: 100px;
+  height: 60px;
+  display: block; /*Sirve para que la imagen se comporte como block y no como inline, peromite que el margin funcione*/
+  margin-left: auto; /*Se distribuye de forma equitativa el margen derecho e izquierdo por eso se centra*/
+  margin-right: auto;
+}

@@ -4,9 +4,326 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
+  <title>Personal Website - HTML</title>
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 <body>
+  <div>
+  <h1>Carlos Jimenez Zepeda <img src="./images/11_UP_GDL_CarlosJimenez_FF.png" alt="Picture of Carlos Jimenez Zepeda"></h1>
+  <p>
+    <b>Student</b><br/>
+    <i>Avenida siempre viva #43</i>,<b> Zapopan</b>
+  </p>
+
+  <blockquote>"De nuevo bailo vals con la señorita Victoria" <br/><b>--Edwin Espangler</b></blockquote>
+
+  <hr/>
+
+  <h2>Personal presentation</h2>
+  <ul>
+    <li>I am an aspiring administrator, financier, and systems engineer with a keen interest in programming and mathematics. Thanks to these pursuits, my goal is to become an accomplished scientist.</li>
+    <li>My other interests include web programming, CRMs, digital marketing, and swimming. </li>
+    <li> I consider myself highly tenacious; I excelled in my high school class and currently maintain the highest grades in my entire faculty.</li>
+    <li>I am seeking new challenges in a company that will enable me to enhance my professional development and pursue an MS and a Ph.D. in computer science or data analytics.</li>
+  </ul>
+  <br/>
+
+  <hr/>
+  </div>
+  <div>
+  <h2>Background</h2>
+
+  <p>I'm from Guadalajara and I want be a billioner</p>
+
+  <hr/>
+
+  </div>
+  <div>
+  <h2>Education</h2>
+
+  <ul>
+    <li><b>Kindergarten #43</b><em>  (2004-2007)</em><a href="https://alemangdl.edu.mx/kindergarten-esp/" target="_blank"><img src="./images/kinder.png" alt="Logo Kindergarten"></a> </li><!--El atributo style se puede usar en todos los tags de html, es el inline styling-->
+    <li><b>Instituto Ignacio Allende (Elementary School)</b><em>  (2007-2013)</em> <a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
+    <li><b>Instituto Ignacio Allende (Middle School)</b><em>  (2013-2016)</em><a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
+    <li><b>Universidad del Valle de México (High School)</b><em>  (2016-2019)</em><a href="https://uvm.mx/la-uvm/campus/guadalajara-sur" target="_blank"><img src="./images/uvm.png" alt="Logo UVM"></a></li> <!--Con alt ayudamos a decidr que deberia haber y ayuda a la accesibilidad--><!--Se muestra una ruta relativa a mi website, es una mejor practica que los absolutos-->
+    <li><b>Universidad Panamericana (University)</b><em>  (2019-..)</em><a href="https://www.up.edu.mx/" target="_blank"><img src="./images/UP.png" alt="Logo Universidad Panamericana"></a></li>
+  </ul>
+
+  <hr/>
+  </div>
+  <div>
+  <h2>Skills</h2>
+
+  <ol type="1" start="1"> <!--Listas desordenadas, el type cambia el tipo de numeración, start nos dice donde empezar-->
+    <li>Expert in Soulslike games (100%)</li>
+    <li>C++ (40%)</li>
+    <li>Python (60%)</li>
+    <li>Professional hamburger eater (120%)</li>
+    <li>Expert in anime (90%)</li>
+  </ol>
+
+  <hr/>
+  </div>
+  <div>
+  <h2>Hobbies</h2>
+
+  <h3>Favorite food</h3>
+
+  <h4>Top 5</h4>
+  <ol>
+    <li>Mexican</li>
+    <li>American</li>
+    <li>Italian</li>
+    <li>Japanese</li>
+    <li>Indian</li>
+  </ol>
+
+  <h4>Bottom 3</h4>
+  <ol start="98">
+    <li>Chinese</li>
+    <li>Korean</li>
+    <li>Thai</li>
+  </ol>
+
+  <h3>Books, Movies & TV Shows</h3>
+
+  <ul>
+    <li><spam><b>Books</b></spam> <!--Es para poner los textos y no modifica, se pone para no romper las reglas de html de que 
+      solo debe haber texto en la última parte del arbol-->
+      <ol>
+        <li>1994 - George Orwell <img src="./images/1984-Logo.png" alt="Image of 1994 book"></li>
+        <li>Man's Search for Meaning - Victor Frankl <img src="./images/man-s-search-for-meaning-1.jpg" alt="Image of man's search for meaning book"></li>
+        <li>Brave New World - Aldous Huxley <img src="./images/Brave_new_world.jpg" alt="Image of brave new world book"></li>
+      </ol>
+    </li>
+    <li><span><b>Movies</b></span>
+      <ol>
+        <li>Interestellar <img src="./images/interestellar.jpg" alt="Poster Interestellar"></li>
+        <li>The pianist <img src="./images/the_pianist.jpg" alt="Poster The Pianist"></li>
+        <li>Shrek <img src="./images/shrek.jpeg" alt="Poster Shrek"></li>
+      </ol>
+    </li>
+    <li><span><b>TV Shows</b></span>
+      <ol>
+        <li>Sherlock <img src="./images/sherlock.jpg" alt="Poster Sherlock"></li>
+        <li>En familia con Chabelo <img src="./images/Chabelo.jpg" alt="Poster en Familia con Chabelo"></li>
+        <li>My happy mariage <img src="./images/My_happy_marrige.jpg" alt="Poster My Happy Marrige"></li>
+      </ol>
+    </li>
+  </ul>
+
+  <hr/>
+  </div>
+
+  <div>
+  <h2>Family birthdays</h2>
+
+
+  <h3>Clasic table</h3>
+
+    <table border="1"><!--Creamos tablas con borde-->
+      <tr>
+        <td>Name</td>
+        <td>Last names</td>
+        <td>Birthday</td>
+      </tr>
+      <tr>
+        <td>Diana Elizabeth</td>
+        <td>Zepeda</td>
+        <td>November 21</td>
+      </tr>
+      <tr>
+        <td>Jesus</td>
+        <td>Zepeda</td>
+        <td>October 21</td>
+      </tr>
+    </table>
+
+    <h3>Modern Table</h3>
+
+    <table border="1">
+      <thead> <!--Ponemos un header a la table-->
+        <tr>
+          <th colspan="2">Full names</th> <!--Es para abarcar el nombre con dos columnas-->
+          <th rowspan="2">Birthday</th>  <!--Es para abarcar el cumpleaños con dos filas-->
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Last names</th>
+        </tr>
+      </thead>
+      <tbody> <!--Ponemos un body a la table-->
+        <tr>
+          <td>Diana Elizabeth</td>
+          <td>Zepeda</td>
+          <td>November 21</td>
+        </tr>
+        <tr>
+          <td>Jesus</td>
+          <td>Zepeda</td>
+          <td>October 21</td>
+        </tr>
+      </tbody>
+      <tfoot> <!--Ponemos un footer a la table-->
+          <caption>Table of birthdays</caption>
+      </tfoot>
+    </table>
+
+    <hr/>
+    </div>
+    <div>
+    <h2><a href="./destination.html" target="_blank">My Favorite Spots</a></h2>
+
+    <ul>
+      <li><a href="./destination.html#Section-tokyo">Tokyo</a></li>
+      <li><a href="./destination.html#Section-paris">Paris</a></li>
+      <li><a href="./destination.html#Section-nyc">New York City</a></li>
+      <li><a href="./destination.html#Section-sydney">Sydney</a></li>
+      <li><a href="./destination.html#Section-rio">Rio de Janeiro</a></li>
+    </ul>
+
+
+    <hr/> 
+    </div>
+    <div>
+    <h2>Heroes</h2>
+
+    <table border="1">
+      <thead>
+        <th>Name</th>
+        <th>Picture</th>
+        <th>Date of birth</th>
+        <th>Date of dead</th>
+        <th>Profession</th>
+        <th>Achievements</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sir Isaac Newton</td>
+          <td><img src="./images/Portrait_of_Sir_Isaac_Newton.jpg" alt="Portrait of Sir Isaac Newton"></td>
+          <td>January 4, 1643</td>
+          <td>March 31, 1727</td>
+          <td> Mathematician, Physicist, Astronomer, Author</td>
+          <td>
+            <ul>
+              <li>Formulated the laws of motion and universal gravitation.</li>
+              <li>Developed the field of classical mechanics.</li>
+              <li>Made significant contributions to calculus.</li>
+              <li>Published "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy).</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Richard Phillips Feynman</td>
+          <td><img src="./images/RichardFeynman.jpg" alt="Picture of Richard Feynman"></td>
+          <td>May 11, 1918</td>
+          <td>February 15, 1988</td>
+          <td> Theoretical Physicist</td>
+          <td>
+            <ul>
+              <li>Pioneered the field of quantum electrodynamics (QED).</li>
+              <li>Developed the Feynman diagrams, which visualize the behavior of subatomic particles.</li>
+              <li>Received the Nobel Prize in Physics in 1965.</li>
+              <li>Played a significant role in the Manhattan Project.</li>
+              <li>Contributed to the understanding of superfluidity and quantum computing.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Syukuro Manabe</td>
+          <td><img src="./images/Syokuro_manabe.jpg" alt="Picture of Syukuro Manabe"></td>
+          <td>September 21, 1931 </td>
+          <td>Still alive</td>
+          <td>Climatologist, Meteorologist</td>
+          <td>
+            <ul>
+              <li>Pioneered the use of computer models to simulate climate change and global warming</li>
+              <li>Developed one of the first models that coupled atmospheric dynamics and thermodynamics with radiation.</li>
+              <li>Awarded the Nobel Prize in Physics in 2021 for his work on the physical modeling of Earth's climate.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr/>
+    </div>
+
+    <div>
+
+    <h2>Agenda</h2>
+
+    <table border="1">
+      <thead>
+        <th>Date</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Description</th>
+        <th>Place</th>
+        <th>Type</th>
+        <th>Notes</th>
+        <th>Flag</th>
+        <th>Free/busy</th>
+      </thead>
+    </table>
+
+    <br/>
+
+    <form action="#" method="POST"> <!--Es el unico tag que puede desencadenar algo que puede ser soportado por el backen, en el action debemos poner el endpoint que va a recibir los requests, puede ser url o un script local-->
+      <label for="event">Date: </label><br/><!--El method no dice que se va a hacer la mayori de veces es un get or post, la diferencia es la seguridad-->
+      <input type="date" name="date" /> 
+      <br/>
+      <br/>
+      <label for="time_start">Time start: </label><br/><!--Cuando creas un input siempre ponerle el tipo y el name sino no se manda-->
+      <input type="time" name="time_start"/><!--El post es mucho mas segiro que get-->
+      <br/>
+      <br/>
+      <label for="time_end">Time end: </label><br/>
+      <input type="time" name="time_end"/>
+      <br/>
+      <br/>
+      <label for="activity">Description: </label><br/>
+      <input type="text" name="activity" placeholder="activity"/> <!--value="New event" Se puede agregar adenrto-->
+      <br/>
+      <br/>
+      <label for="place">Place: </label><br/>
+      <input type="text" name="place"/>
+      <br/>
+      <br/>
+      <label for="type">Type: </label><br/>
+      <select name="type">
+        <option value="School">School</option>
+        <option value="Personal">Personal</option>
+        <option value="Profesional">Profesional</option>
+        <option value="Familiar">Familiar</option>
+        <option value="Other">Other</option>
+      </select>
+      <br/>
+      <br/>
+      <label for="notes">Notes: </label><br/>
+      <textarea name="notes" cols="40" rows="5">
+      </textarea>
+      <br/>
+      <br/>
+      <label for="flag">Flag: </label><br/>
+      <input type="color" name="flag"/>
+      <br/>
+      <br/>
+      <label>Select: </label><br/>
+      <input type="radio" name="free" value="Free">
+      <label for="free">Free</label>
+      <input type="radio" name="busy" value="Busy">
+      <label for="busy">Busy</label>
+      <br/>
+      <br/>
+      <input type="submit" value="Agregar"/><!--Este es el unico que activa todo en el form y es el unico obligatorio-->
+    </form>
+    
+    <br/>
+    <hr/>
+    </div>
   
+    <a href="#">Go to top</a>
+    
 </body>
 </html>
