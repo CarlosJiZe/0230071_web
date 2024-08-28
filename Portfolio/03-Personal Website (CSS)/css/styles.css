@@ -290,4 +290,68 @@ img.cld{
   margin: auto;
 }
 
+.card {
+  position: relative; /* Posiciona la tarjeta de manera relativa, lo que permite que los elementos hijos con position: absolute; se posicionen en relación con este contenedor */
+  width: 400px; /* Ancho fijo de la tarjeta */
+  height: 450px; /* Altura fija de la tarjeta */
+  margin: 20px; /* Margen alrededor de la tarjeta para separar las tarjetas entre sí */
+}
+
+.card .face {
+  position: absolute; /* Posiciona la cara (front o back) de manera absoluta dentro de la tarjeta */
+  width: 100%; /* La cara ocupa el 100% del ancho de la tarjeta */
+  height: 100%; /* La cara ocupa el 100% de la altura de la tarjeta */
+  backface-visibility: hidden; /* Oculta la cara posterior cuando está rotada */
+  border-radius: 10px; /* Bordes redondeados en la tarjeta */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del área de la tarjeta */
+  transition: .5s; /* Transición suave de 0.5 segundos para transformaciones */
+  background-color: white; /* Color de fondo blanco para la tarjeta */
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg); /* Inicialmente, la cara frontal no está rotada */
+  box-shadow: 0px 5px 10px black; /* Sombra para dar un efecto de profundidad a la tarjeta */
+  display: grid; /* Utiliza Grid para organizar los elementos dentro de la cara frontal */
+  grid-template-rows: 50% 20% 10% 10% 10%; /* Define cinco filas con proporciones específicas para la distribución de contenido */
+}
+
+.card .front img {
+  width: 100%; /* La imagen ocupa el 100% del ancho de la fila en la que se encuentra */
+  height: 100%; /* La imagen ocupa el 100% de la altura de la fila en la que se encuentra */
+}
+
+.card .front h3 {
+  border: 0; /* Elimina cualquier borde del encabezado */
+  padding: 0; /* Elimina cualquier padding del encabezado */
+  line-height: 90px; /* Altura de línea establecida para alinear verticalmente el texto dentro de su contenedor */
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg); /* Inicialmente, la cara posterior está rotada 180 grados, quedando oculta */
+  display: flex; /* Utiliza Flexbox para organizar los elementos dentro de la cara posterior */
+  flex-direction: column; /* Los elementos se organizan en una columna dentro de la cara posterior */
+}
+
+.card .back .heroes {
+  width: 90%; /* El contenido ocupa el 90% del ancho disponible */
+  padding-left: 5%; /* Añade un padding a la izquierda para centrar el contenido dentro del 90% del espacio disponible */
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg); /* Al pasar el ratón sobre la tarjeta, la cara frontal rota 180 grados y queda oculta */
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg); /* Al pasar el ratón sobre la tarjeta, la cara posterior rota 180 grados adicionales, quedando visible */
+}
+
+.dheroes {
+  display: flex; /* Utiliza Flexbox para organizar las tarjetas dentro de este contenedor */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben en una sola línea */
+  justify-content: space-between; /* Distribuye las tarjetas uniformemente con espacio entre ellas */
+}
+
+
+
+
 

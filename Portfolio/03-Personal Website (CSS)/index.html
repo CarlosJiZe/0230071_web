@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 <body>
@@ -185,67 +186,64 @@
 
     <hr/> 
     </div>
-    <div class="section">
+    <div class="section" >
     <h2>Heroes</h2>
-
-    <table border="1">
-      <thead>
-        <th>Name</th>
-        <th>Picture</th>
-        <th>Date of birth</th>
-        <th>Date of dead</th>
-        <th>Profession</th>
-        <th>Achievements</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Sir Isaac Newton</td>
-          <td><img src="./images/Portrait_of_Sir_Isaac_Newton.jpg" alt="Portrait of Sir Isaac Newton"></td>
-          <td>January 4, 1643</td>
-          <td>March 31, 1727</td>
-          <td> Mathematician, Physicist, Astronomer, Author</td>
-          <td>
-            <ul class="heroes">
-              <li class="Hero">Formulated the laws of motion and universal gravitation.</li>
-              <li class="Hero">Developed the field of classical mechanics.</li>
-              <li class="Hero">Made significant contributions to calculus.</li>
-              <li class="Hero">Published "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy).</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Richard Phillips Feynman</td>
-          <td><img src="./images/RichardFeynman.jpg" alt="Picture of Richard Feynman"></td>
-          <td>May 11, 1918</td>
-          <td>February 15, 1988</td>
-          <td> Theoretical Physicist</td>
-          <td>
-            <ul class="heroes">
-              <li class="Hero">Pioneered the field of quantum electrodynamics (QED).</li>
-              <li class="Hero">Developed the Feynman diagrams, which visualize the behavior of subatomic particles.</li>
-              <li class="Hero">Received the Nobel Prize in Physics in 1965.</li>
-              <li class="Hero">Played a significant role in the Manhattan Project.</li>
-              <li class="Hero">Contributed to the understanding of superfluidity and quantum computing.</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Syukuro Manabe</td>
-          <td><img src="./images/Syokuro_manabe.jpg" alt="Picture of Syukuro Manabe"></td>
-          <td>September 21, 1931 </td>
-          <td>Still alive</td>
-          <td>Climatologist, Meteorologist</td>
-          <td>
-            <ul class="heroes">
-              <li class="Hero">Pioneered the use of computer models to simulate climate change and global warming</li>
-              <li class="Hero">Developed one of the first models that coupled atmospheric dynamics and thermodynamics with radiation.</li>
-              <li class="Hero">Awarded the Nobel Prize in Physics in 2021 for his work on the physical modeling of Earth's climate.</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
+    <div class="dheroes">
+      <div class="card">
+        <div class="face front">
+          <img src="./images/Portrait_of_Sir_Isaac_Newton.jpg" alt="Portrait of Sir Isaac Newton">
+          <h3>Sir Isaac Newton</h3>
+          <p class="prof">Mathematician, Physicist, Astronomer, Author</p>
+          <p class="birth">January 4, 1643</p>
+          <p class="dead">March 31, 1727 <i class="fa-solid fa-cross"></i></p>
+        </div>
+        <div class="face back">
+          <h3>Achievements</h3>
+          <ul class="heroes">
+            <li class="Hero">Formulated the laws of motion and universal gravitation.</li>
+            <li class="Hero">Developed the field of classical mechanics.</li>
+            <li class="Hero">Made significant contributions to calculus.</li>
+            <li class="Hero">Published "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face front">
+          <img src="./images/RichardFeynman.jpg" alt="Picture of Richard Feynman">
+          <h3>Richard Phillips Feynman</h3>
+          <p class="prof">Theoretical Physicist</p>
+          <p class="birth">May 11, 1918</p>
+          <p class="dead">February 15, 1988 <i class="fa-solid fa-cross"></i></p>
+        </div>
+        <div class="face back">
+          <h3>Achievements</h3>
+          <ul class="heroes">
+            <li class="Hero">Pioneered the field of quantum electrodynamics (QED).</li>
+            <li class="Hero">Developed the Feynman diagrams, which visualize the behavior of subatomic particles.</li>
+            <li class="Hero">Received the Nobel Prize in Physics in 1965.</li>
+            <li class="Hero">Played a significant role in the Manhattan Project.</li>
+            <li class="Hero">Contributed to the understanding of superfluidity and quantum computing.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face front">
+          <img src="./images/Syokuro_manabe.jpg" alt="Picture of Syukuro Manabe">
+          <h3>Syukuro Manabe</h3>
+          <p class="prof">Climatologist, Meteorologist</p>
+          <p class="birth">September 21, 1931</p>
+          <p class="dead">Still alive</p>
+        </div>
+        <div class="face back">
+          <h3>Achievements</h3>
+          <ul class="heroes">
+            <li class="Hero">Pioneered the use of computer models to simulate climate change and global warming</li>
+            <li class="Hero">Developed one of the first models that coupled atmospheric dynamics and thermodynamics with radiation.</li>
+            <li class="Hero">Awarded the Nobel Prize in Physics in 2021 for his work on the physical modeling of Earth's climate.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <hr/>
     </div>
     <div class="section">
