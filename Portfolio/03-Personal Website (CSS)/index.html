@@ -5,32 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website - HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 <body>
-  <div>
-  <h1>Carlos Jimenez Zepeda <img src="./images/11_UP_GDL_CarlosJimenez_FF.png" alt="Picture of Carlos Jimenez Zepeda"></h1>
-  <p>
+  <div class="section">
+  <h1 class="hprincipal">Carlos Jimenez Zepeda <img src="./images/11_UP_GDL_CarlosJimenez_FF.png" alt="Picture of Carlos Jimenez Zepeda" class="principal"></h1>
+  <p class="pRed">
     <b>Student</b><br/>
     <i>Avenida siempre viva #43</i>,<b> Zapopan</b>
   </p>
 
-  <blockquote>"De nuevo bailo vals con la señorita Victoria" <br/><b>--Edwin Espangler</b></blockquote>
-
-  <hr/>
+  <blockquote class="bBlack">"De nuevo bailo vals con la señorita Victoria" <br/><b>--Edwin Espangler</b></blockquote>
 
   <h2>Personal presentation</h2>
-  <ul>
-    <li>I am an aspiring administrator, financier, and systems engineer with a keen interest in programming and mathematics. Thanks to these pursuits, my goal is to become an accomplished scientist.</li>
-    <li>My other interests include web programming, CRMs, digital marketing, and swimming. </li>
-    <li> I consider myself highly tenacious; I excelled in my high school class and currently maintain the highest grades in my entire faculty.</li>
-    <li>I am seeking new challenges in a company that will enable me to enhance my professional development and pursue an MS and a Ph.D. in computer science or data analytics.</li>
+  <ul class="ppg">
+    <li class="pp">I am an aspiring administrator, financier, and systems engineer with a keen interest in programming and mathematics. Thanks to these pursuits, my goal is to become an accomplished scientist.</li>
+    <li class="pp">My other interests include web programming, CRMs, digital marketing, and swimming. </li>
+    <li class="pp"> I consider myself highly tenacious; I excelled in my high school class and currently maintain the highest grades in my entire faculty.</li>
+    <li class="pp">I am seeking new challenges in a company that will enable me to enhance my professional development and pursue an MS and a Ph.D. in computer science or data analytics.</li>
   </ul>
-  <br/>
-
   <hr/>
-  </div>
-  <div>
+  </div>    
+  <div class="section">
   <h2>Background</h2>
 
   <p>I'm from Guadalajara and I want be a billioner</p>
@@ -38,84 +37,83 @@
   <hr/>
 
   </div>
-  <div>
+  <div class="section">
   <h2>Education</h2>
 
-  <ul>
-    <li><b>Kindergarten #43</b><em>  (2004-2007)</em><a href="https://alemangdl.edu.mx/kindergarten-esp/" target="_blank"><img src="./images/kinder.png" alt="Logo Kindergarten"></a> </li><!--El atributo style se puede usar en todos los tags de html, es el inline styling-->
-    <li><b>Instituto Ignacio Allende (Elementary School)</b><em>  (2007-2013)</em> <a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
-    <li><b>Instituto Ignacio Allende (Middle School)</b><em>  (2013-2016)</em><a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende"></a></li>
-    <li><b>Universidad del Valle de México (High School)</b><em>  (2016-2019)</em><a href="https://uvm.mx/la-uvm/campus/guadalajara-sur" target="_blank"><img src="./images/uvm.png" alt="Logo UVM"></a></li> <!--Con alt ayudamos a decidr que deberia haber y ayuda a la accesibilidad--><!--Se muestra una ruta relativa a mi website, es una mejor practica que los absolutos-->
-    <li><b>Universidad Panamericana (University)</b><em>  (2019-..)</em><a href="https://www.up.edu.mx/" target="_blank"><img src="./images/UP.png" alt="Logo Universidad Panamericana"></a></li>
+  <ul class="edu">
+    <li class="edus"><b>Kindergarten #43</b><em>  (2004-2007)</em><a href="https://alemangdl.edu.mx/kindergarten-esp/" target="_blank"><img src="./images/kinder.png" alt="Logo Kindergarten" class="logos"></a> </li><!--El atributo style se puede usar en todos los tags de html, es el inline styling-->
+    <li class="edus"><b>Instituto Ignacio Allende (Elementary School)</b><em>  (2007-2013)</em> <a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende" class="logos"></a></li>
+    <li class="edus"><b>Instituto Ignacio Allende (Middle School)</b><em>  (2013-2016)</em><a href="https://institutoignacioallende.com.mx/" target="_blank"><img src="./images/Allende.png" alt="Logo Instituto Ignacio Allende" class="logos"></a></li>
+    <li class="edus"><b>Universidad del Valle de México (High School)</b><em>  (2016-2019)</em><a href="https://uvm.mx/la-uvm/campus/guadalajara-sur" target="_blank"><img src="./images/uvm.png" alt="Logo UVM" class="logos"></a></li> <!--Con alt ayudamos a decidr que deberia haber y ayuda a la accesibilidad--><!--Se muestra una ruta relativa a mi website, es una mejor practica que los absolutos-->
+    <li class="edus"><b>Universidad Panamericana (University)</b><em>  (2019-..)</em><a href="https://www.up.edu.mx/" target="_blank"><img src="./images/UP.png" alt="Logo Universidad Panamericana" class="logos"></a></li>
   </ul>
 
   <hr/>
   </div>
-  <div>
+  <div class="section">
   <h2>Skills</h2>
 
-  <ol type="1" start="1"> <!--Listas desordenadas, el type cambia el tipo de numeración, start nos dice donde empezar-->
-    <li>Expert in Soulslike games (100%)</li>
-    <li>C++ (40%)</li>
-    <li>Python (60%)</li>
-    <li>Professional hamburger eater (120%)</li>
-    <li>Expert in anime (90%)</li>
+  <ol type="1" start="1" class="ski"> <!--Listas desordenadas, el type cambia el tipo de numeración, start nos dice donde empezar-->
+    <li class="skil">Expert in Soulslike games (100%)</li>
+    <li class="skil">C++ (40%)</li>
+    <li class="skil">Python (60%)</li>
+    <li class="skil">Professional hamburger eater (120%)</li>
+    <li class="skil">Expert in anime (90%)</li>
   </ol>
 
   <hr/>
   </div>
-  <div>
+  <div class="section">
   <h2>Hobbies</h2>
 
   <h3>Favorite food</h3>
 
   <h4>Top 5</h4>
-  <ol>
-    <li>Mexican</li>
-    <li>American</li>
-    <li>Italian</li>
-    <li>Japanese</li>
-    <li>Indian</li>
+  <ol class="fods">
+    <li class="fod">Mexican</li>
+    <li class="fod">American</li>
+    <li class="fod">Italian</li>
+    <li class="fod">Japanese</li>
+    <li class="fod">Indian</li>
   </ol>
 
   <h4>Bottom 3</h4>
-  <ol start="98">
-    <li>Chinese</li>
-    <li>Korean</li>
-    <li>Thai</li>
+  <ol start="98" class="fods">
+    <li class="fod">Chinese</li>
+    <li class="fod">Korean</li>
+    <li class="fod">Thai</li>
   </ol>
 
   <h3>Books, Movies & TV Shows</h3>
 
-  <ul>
+  <ul class="hobs">
     <li><spam><b>Books</b></spam> <!--Es para poner los textos y no modifica, se pone para no romper las reglas de html de que 
       solo debe haber texto en la última parte del arbol-->
-      <ol>
-        <li>1994 - George Orwell <img src="./images/1984-Logo.png" alt="Image of 1994 book"></li>
-        <li>Man's Search for Meaning - Victor Frankl <img src="./images/man-s-search-for-meaning-1.jpg" alt="Image of man's search for meaning book"></li>
-        <li>Brave New World - Aldous Huxley <img src="./images/Brave_new_world.jpg" alt="Image of brave new world book"></li>
+      <ol class="bmt">
+        <li>1994 - George Orwell <img src="./images/1984-Logo.png" alt="Image of 1994 book" class="bmts"></li>
+        <li>Man's Search for Meaning - Victor Frankl <img src="./images/man-s-search-for-meaning-1.jpg" alt="Image of man's search for meaning book" class="bmts"></li>
+        <li>Brave New World - Aldous Huxley <img src="./images/Brave_new_world.jpg" alt="Image of brave new world book" class="bmts"></li>
       </ol>
     </li>
     <li><span><b>Movies</b></span>
-      <ol>
-        <li>Interestellar <img src="./images/interestellar.jpg" alt="Poster Interestellar"></li>
-        <li>The pianist <img src="./images/the_pianist.jpg" alt="Poster The Pianist"></li>
-        <li>Shrek <img src="./images/shrek.jpeg" alt="Poster Shrek"></li>
+      <ol class="bmt">
+        <li>Interestellar <img src="./images/interest.jpg" alt="Poster Interestellar" class="bmts"></li>
+        <li>The pianist <img src="./images/the_pianist.jpg" alt="Poster The Pianist" class="bmts"></li>
+        <li>Shrek <img src="./images/Sherks_p.jpg" alt="Poster Shrek" class="bmts"></li>
       </ol>
     </li>
     <li><span><b>TV Shows</b></span>
-      <ol>
-        <li>Sherlock <img src="./images/sherlock.jpg" alt="Poster Sherlock"></li>
-        <li>En familia con Chabelo <img src="./images/Chabelo.jpg" alt="Poster en Familia con Chabelo"></li>
-        <li>My happy mariage <img src="./images/My_happy_marrige.jpg" alt="Poster My Happy Marrige"></li>
+      <ol class="bmt"> <!--Se pueden añadir multiples clases a un componente solo las separas con espacio class="bmt mx" se tienen las dos clases-->
+        <li>Sherlock <img src="./images/sherlock.jpg" alt="Poster Sherlock" class="bmts"></li>
+        <li>Malcolm in the middle <img src="./images/malcolm.jpg" alt="Poster Malcolm in the middle" class="bmts"></li>
+        <li>My happy mariage <img src="./images/My_happy_marrige.jpg" alt="Poster My Happy Marrige" class="bmts"></li>
       </ol>
     </li>
   </ul>
 
   <hr/>
   </div>
-
-  <div>
+  <div class="section">
   <h2>Family birthdays</h2>
 
 
@@ -171,21 +169,23 @@
 
     <hr/>
     </div>
-    <div>
+    <div class="section">
     <h2><a href="./destination.html" target="_blank">My Favorite Spots</a></h2>
 
-    <ul>
+    <ul class="plcs">
       <li><a href="./destination.html#Section-tokyo">Tokyo</a></li>
       <li><a href="./destination.html#Section-paris">Paris</a></li>
       <li><a href="./destination.html#Section-nyc">New York City</a></li>
       <li><a href="./destination.html#Section-sydney">Sydney</a></li>
       <li><a href="./destination.html#Section-rio">Rio de Janeiro</a></li>
     </ul>
-
+    <img src="./images/cloud.png" alt="Image of a cloud" class="cld cld1"/> 
+    <img src="./images/cloud.png" alt="Image of a cloud" class="cld cld2"/>
+    <img src="./images/mountain.png" alt="Image of a mountain" class="mtn"> 
 
     <hr/> 
     </div>
-    <div>
+    <div class="section">
     <h2>Heroes</h2>
 
     <table border="1">
@@ -205,11 +205,11 @@
           <td>March 31, 1727</td>
           <td> Mathematician, Physicist, Astronomer, Author</td>
           <td>
-            <ul>
-              <li>Formulated the laws of motion and universal gravitation.</li>
-              <li>Developed the field of classical mechanics.</li>
-              <li>Made significant contributions to calculus.</li>
-              <li>Published "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy).</li>
+            <ul class="heroes">
+              <li class="Hero">Formulated the laws of motion and universal gravitation.</li>
+              <li class="Hero">Developed the field of classical mechanics.</li>
+              <li class="Hero">Made significant contributions to calculus.</li>
+              <li class="Hero">Published "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy).</li>
             </ul>
           </td>
         </tr>
@@ -220,12 +220,12 @@
           <td>February 15, 1988</td>
           <td> Theoretical Physicist</td>
           <td>
-            <ul>
-              <li>Pioneered the field of quantum electrodynamics (QED).</li>
-              <li>Developed the Feynman diagrams, which visualize the behavior of subatomic particles.</li>
-              <li>Received the Nobel Prize in Physics in 1965.</li>
-              <li>Played a significant role in the Manhattan Project.</li>
-              <li>Contributed to the understanding of superfluidity and quantum computing.</li>
+            <ul class="heroes">
+              <li class="Hero">Pioneered the field of quantum electrodynamics (QED).</li>
+              <li class="Hero">Developed the Feynman diagrams, which visualize the behavior of subatomic particles.</li>
+              <li class="Hero">Received the Nobel Prize in Physics in 1965.</li>
+              <li class="Hero">Played a significant role in the Manhattan Project.</li>
+              <li class="Hero">Contributed to the understanding of superfluidity and quantum computing.</li>
             </ul>
           </td>
         </tr>
@@ -236,10 +236,10 @@
           <td>Still alive</td>
           <td>Climatologist, Meteorologist</td>
           <td>
-            <ul>
-              <li>Pioneered the use of computer models to simulate climate change and global warming</li>
-              <li>Developed one of the first models that coupled atmospheric dynamics and thermodynamics with radiation.</li>
-              <li>Awarded the Nobel Prize in Physics in 2021 for his work on the physical modeling of Earth's climate.</li>
+            <ul class="heroes">
+              <li class="Hero">Pioneered the use of computer models to simulate climate change and global warming</li>
+              <li class="Hero">Developed one of the first models that coupled atmospheric dynamics and thermodynamics with radiation.</li>
+              <li class="Hero">Awarded the Nobel Prize in Physics in 2021 for his work on the physical modeling of Earth's climate.</li>
             </ul>
           </td>
         </tr>
@@ -248,8 +248,7 @@
 
     <hr/>
     </div>
-
-    <div>
+    <div class="section">
 
     <h2>Agenda</h2>
 
@@ -271,7 +270,7 @@
 
     <form action="#" method="POST"> <!--Es el unico tag que puede desencadenar algo que puede ser soportado por el backen, en el action debemos poner el endpoint que va a recibir los requests, puede ser url o un script local-->
       <label for="event">Date: </label><br/><!--El method no dice que se va a hacer la mayori de veces es un get or post, la diferencia es la seguridad-->
-      <input type="date" name="date" /> 
+      <input type="date" name="event" /> 
       <br/>
       <br/>
       <label for="time_start">Time start: </label><br/><!--Cuando creas un input siempre ponerle el tipo y el name sino no se manda-->
@@ -323,7 +322,7 @@
     <hr/>
     </div>
   
-    <a href="#">Go to top</a>
+    <a href="#" class="lp">Go to top</a>
     
 </body>
 </html>
