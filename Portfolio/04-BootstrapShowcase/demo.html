@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Demo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Places</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hobbies
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#games">
+                      <i class="bi bi-controller"></i> Games
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#books">
+                      <i class="bi bi-book"></i> Books
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#Movies">
+                      <i class="bi bi-film"></i> Movies
+                    </a>
+                  </li>
+                </ul>
+              </li>              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div id="games">
+        <h2 class="text-center bg-dark text-white m-0">Games</h2>
+        <div id="carouselExampleIndicators" class="carousel slide">
+          
+            <div class="carousel-inner">
+             
+              <div class="carousel-item active">
+                <div class="container">
+                  <h5 class="text-center mt-3">Dark Souls 3</h5> 
+                  <img src="https://static.bandainamcoent.eu/high/dark-souls/dark-souls-3/00-page-setup/ds3_game-thumbnail.jpg" class="d-block w-100 mx-auto" alt="Image of DS" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">Dark Souls 3 es un acción RGP desarrollado por FromSoftware.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDS3" aria-controls="offcanvasDS3">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+              
+              <div class="carousel-item">
+                <div class="container">
+                  <h5 class="text-center mt-3">Sekiro: Shadows Die Twice</h5> 
+                  <img src="https://www.gamereactor.es/media/80/sekiro_2788093b.jpg" class="d-block w-100 mx-auto" alt="Image of sekiro" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">Sekiro: Shadows Die Twice es una aventura de samurai desarrollada por FromSoftware.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSekiro" aria-controls="offcanvasSekiro">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+             
+              <div class="carousel-item">
+                <div class="container">
+                  <h5 class="text-center mt-3">Elden Ring</h5> 
+                  <img src="https://sm.ign.com/ign_es/news/e/elden-ring/elden-ring-update-114-makes-shadow-of-the-erdtrees-final-bos_ck9e.jpg" class="d-block w-100 mx-auto" alt="Image of elden ring" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">Elden Ring es un acción RPG de mundo-abierto, tambien de FromSoftware.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEldenRing" aria-controls="offcanvasEldenRing">Más información</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <!-- Offcanvas for Dark Souls 3 -->
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasDS3" aria-labelledby="offcanvasDS3Label">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDS3Label">Dark Souls 3</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"Dark Souls 3" es el capítulo final de la saga Souls. Conocido por su atmósfera oscura, batallas desafiantes y la profundidad de su lore, el juego ofrece una experiencia inolvidable a los jugadores que buscan retos extremos y exploración meticulosa.</p>
+                </div>
+            </div>
+            
+            <!-- Offcanvas for Sekiro -->
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasSekiro" aria-labelledby="offcanvasSekiroLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasSekiroLabel">Sekiro: Shadows Die Twice</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"Sekiro: Shadows Die Twice" ofrece un enfoque único en la postura y parry en combate, lo que lo diferencia de otros juegos de FromSoftware. El juego sigue a un guerrero shinobi en una misión para rescatar a su maestro en una versión fantástica del Japón feudal.</p>
+                </div>
+            </div>
+            
+            <!-- Offcanvas for Elden Ring -->
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasEldenRing" aria-labelledby="offcanvasEldenRingLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasEldenRingLabel">Elden Ring</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"Elden Ring" combina los intensos combates de los juegos Souls con un vasto mundo abierto para explorar. Desarrollado en colaboración con el autor George R.R. Martin, el juego introduce una nueva profundidad en su historia y un enfoque en la exploración sin precedentes en la serie.</p>
+                </div>
+            </div>
+          
+      </div>
+      <br/>
+      <div id="books"> 
+        <h2 class="text-center bg-dark text-white m-0">Books</h2>
+        <div id="carouselExampleIndicators2" class="carousel slide">
+  
+            <div class="carousel-inner">
+          
+              <div class="carousel-item active">
+                <div class="container">
+                  <h5 class="text-center mt-3">El Principito</h5> 
+                  <img src="https://media.timeout.com/images/106145525/image.jpg" class="d-block w-100 mx-auto" alt="Imagen de El Principito" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">"El Principito" es una novela corta escrita por Antoine de Saint-Exupéry que trata sobre la vida, la amistad, y la pérdida a través de los ojos de un niño.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPrincipito" aria-controls="offcanvasPrincipito">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="carousel-item">
+                <div class="container">
+                  <h5 class="text-center mt-3">El hombre en busca de sentido</h5> 
+                  <img src="https://panel.myt.org.mx/storage/notas/April2020/GWWVAdKeoEOfHLcrApDr.jpg" class="d-block w-100 mx-auto" alt="Imagen de El hombre en busca de sentido" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">"El hombre en busca de sentido" es un relato autobiográfico de Viktor Frankl sobre su experiencia en campos de concentración y cómo encontró sentido en medio del sufrimiento.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSentido" aria-controls="offcanvasSentido">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="carousel-item">
+                <div class="container">
+                  <h5 class="text-center mt-3">1984</h5> 
+                  <img src="https://media.revistagq.com/photos/662e65beac53f837bf67e619/16:9/w_2560%2Cc_limit/cover-52391.jpg" class="d-block w-100 mx-auto" alt="Imagen de 1984" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">"1984" es una novela distópica escrita por George Orwell que explora un futuro donde la vigilancia y el control son omnipresentes en una sociedad totalitaria.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1984" aria-controls="offcanvas1984">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            
+          </div>
+                   
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasPrincipito" aria-labelledby="offcanvasPrincipitoLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasPrincipitoLabel">El Principito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"El Principito" es una obra filosófica y poética de Antoine de Saint-Exupéry. A través de las aventuras de un pequeño príncipe que explora planetas y conoce a personajes únicos, la novela ofrece profundas reflexiones sobre la naturaleza humana, la amistad, y el amor.</p>
+                </div>
+            </div>
+            
+            
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasSentido" aria-labelledby="offcanvasSentidoLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasSentidoLabel">El hombre en busca de sentido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"El hombre en busca de sentido" de Viktor Frankl es una reflexión sobre cómo los seres humanos encuentran un propósito incluso en las circunstancias más difíciles. Frankl narra su tiempo en los campos de concentración nazis y cómo la búsqueda de sentido lo ayudó a sobrevivir.</p>
+                </div>
+            </div>
+            
+           
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvas1984" aria-labelledby="offcanvas1984Label">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvas1984Label">1984</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"1984" es una novela de George Orwell que describe un futuro distópico bajo un régimen totalitario liderado por el Gran Hermano. La novela aborda temas de censura, vigilancia, y la manipulación del lenguaje y el pensamiento.</p>
+                </div>
+            </div>
+      </div>
+      <br/>
+      <div id="Movies">
+        <h2 class="text-center bg-dark text-white m-0">Movies</h2>
+        <div id="carouselExampleIndicators3" class="carousel slide">
+
+            <div class="carousel-inner">
+          
+              <div class="carousel-item active">
+                <div class="container">
+                  <h5 class="text-center mt-3">Interestelar</h5> 
+                  <img src="https://m.media-amazon.com/images/S/pv-target-images/8698aa0aa73e5acae0d4ec7fd46e6be40e7b9bd14668ce6d8694ae7442d2a722.jpg" class="d-block w-100 mx-auto" alt="Imagen de Interestelar" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">"Interestelar" es una película de ciencia ficción dirigida por Christopher Nolan que explora viajes espaciales, agujeros de gusano y la supervivencia de la humanidad.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasInterestelar" aria-controls="offcanvasInterestelar">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="carousel-item">
+                <div class="container">
+                  <h5 class="text-center mt-3">Shrek</h5> 
+                  <img src="https://somoskudasai.com/wp-content/uploads/2024/04/portada_shrek.jpg" class="d-block w-100 mx-auto" alt="Imagen de Shrek" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">"Shrek" es una película animada que sigue las aventuras de un ogro y su fiel compañero burro en un viaje para rescatar a la princesa Fiona.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasShrek" aria-controls="offcanvasShrek">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="carousel-item">
+                <div class="container">
+                  <h5 class="text-center mt-3">Me quiero comer tu páncreas</h5> 
+                  <img src="https://www.funeralnatural.net/sites/default/files/pelicula/imagen-de-galeria/pancreas2.jpg" class="d-block w-100 mx-auto" alt="Imagen de Me quiero comer tu páncreas" style="max-height: 600px; object-fit: cover;">
+                  <p class="text-center mt-3">"Me quiero comer tu páncreas" es una película de anime basada en la novela homónima que narra la emotiva relación entre un joven solitario y una chica con una enfermedad terminal.</p> 
+                  <div class="text-center">
+                    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPancreas" aria-controls="offcanvasPancreas">Más información</button>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          
+          </div>
+                    
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasInterestelar" aria-labelledby="offcanvasInterestelarLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasInterestelarLabel">Interestelar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"Interestelar" es una épica película de ciencia ficción protagonizada por Matthew McConaughey, Anne Hathaway y Jessica Chastain. La trama se centra en un grupo de astronautas que viajan a través de un agujero de gusano para buscar un nuevo hogar para la humanidad. Explora temas de amor, sacrificio, y el tiempo.</p>
+                </div>
+            </div>
+            
+            
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasShrek" aria-labelledby="offcanvasShrekLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasShrekLabel">Shrek</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"Shrek" es una película animada de DreamWorks que revolucionó el género con su humor irreverente y personajes memorables. La historia sigue a Shrek, un ogro solitario que se embarca en una misión para salvar a la princesa Fiona, acompañado de su amigo Burro.</p>
+                </div>
+            </div>
+            
+        
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasPancreas" aria-labelledby="offcanvasPancreasLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasPancreasLabel">Me quiero comer tu páncreas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                <p>"Me quiero comer tu páncreas" es una película de anime que adapta la novela de Yoru Sumino. Sigue la conmovedora relación entre un joven reservado y una chica extrovertida que sufre una enfermedad terminal, y cómo su amistad cambia sus vidas para siempre.</p>
+                </div>
+            </div>
+          
+      </div>
+      <br/>
+    <div id="terms&cond">
+        <h2 class="text-center bg-dark text-white m-0">Términos y condiciones</h2>
+        <div class="row justify-content-center">
+            <div class="col-4">
+              <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link" href="#section-1">Introducción</a>
+                  <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#section-1-1">Propósito</a>
+                    <a class="nav-link ms-3 my-1" href="#section-1-2">Aceptación</a>
+                  </nav>
+                  <a class="nav-link" href="#section-2">Condiciones de Uso</a>
+                  <a class="nav-link" href="#section-3">Responsabilidades</a>
+                  <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#section-3-1">Derechos de la Empresa</a>
+                    <a class="nav-link ms-3 my-1" href="#section-3-2">Obligaciones del Usuario</a>
+                  </nav>
+                </nav>
+              </nav>
+            </div>
+          
+            <div class="col-6">
+              <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2 overflow-auto mx-auto" tabindex="0" style="height: 300px; max-width: 700px;">
+                <div id="section-1">
+                  <h4>Introducción</h4>
+                  <p>Este documento establece los términos y condiciones que rigen el uso de nuestros servicios y sitio web. Por favor, lea atentamente antes de utilizar nuestros servicios.</p>
+                </div>
+                <div id="section-1-1">
+                  <h5>Propósito</h5>
+                  <p>El propósito de estos términos y condiciones es definir las reglas que los usuarios deben seguir al utilizar nuestros servicios, garantizando una experiencia segura y justa para todos.</p>
+                </div>
+                <div id="section-1-2">
+                  <h5>Aceptación</h5>
+                  <p>Al acceder y utilizar nuestros servicios, usted acepta cumplir con estos términos y condiciones en su totalidad. Si no está de acuerdo con alguna parte, no debe utilizar nuestros servicios.</p>
+                </div>
+                <div id="section-2">
+                  <h4>Condiciones de Uso</h4>
+                  <p>Los usuarios deben utilizar nuestros servicios de manera responsable y en conformidad con todas las leyes aplicables. El uso indebido de los servicios puede resultar en la suspensión o terminación de la cuenta del usuario.</p>
+                </div>
+                <div id="section-3">
+                  <h4>Responsabilidades</h4>
+                  <p>Tanto la empresa como el usuario tienen responsabilidades al utilizar los servicios. Estos términos definen los límites de esas responsabilidades.</p>
+                </div>
+                <div id="section-3-1">
+                  <h5>Derechos de la Empresa</h5>
+                  <p>Nos reservamos el derecho de modificar o terminar los servicios en cualquier momento, sin previo aviso. También podemos suspender el acceso de un usuario si se sospecha de actividades que violen estos términos.</p>
+                </div>
+                <div id="section-3-2">
+                  <h5>Obligaciones del Usuario</h5>
+                  <p>El usuario se compromete a utilizar los servicios de forma ética, sin involucrarse en actividades ilegales o perjudiciales. El incumplimiento de estas obligaciones puede resultar en la terminación del acceso a los servicios.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+                    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzWk5y8fIW6QXQKoV8y1RwPp2tkaWcZOugDe+zc/2pO1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

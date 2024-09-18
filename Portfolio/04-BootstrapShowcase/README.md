@@ -26,19 +26,19 @@ Select 5 elements from the following list and make a small demo of how would you
 ---
 
 - Color mode
-- Navbar with search field
+- Navbar with search field // x
 - Sticky footer
 - Collapsible sidebar
-- Drop downs with icon
-- Offcanvas content
+- Drop downs with icon // x
+- Offcanvas content // x
 - Pagination on content
 - Complex modals
 - Badges with image and action
 - Breadcrumbs with icons
 - Loading buttons
-- Carousel with title and text
+- Carousel with title and text // x
 - Hero with centered screenshot
-- Scrollspy
+- Scrollspy // x
 - Toast
 - Sign in form
 - Album
