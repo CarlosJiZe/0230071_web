@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demostración de bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-primary" data-bs-theme="dark">
@@ -36,6 +37,230 @@
             </div>
         </div>
     </nav>
+    <hr class="m-0">
+    <br/>
+    <div>
+        <h1 class="text-center">Example page</h1>
+    </div>
+    <br/>
+    <hr class="m-0">
+    <div>
+        <h2 class="text-center bg-dark text-white m-0">Accordeon</h2>
+    </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Games
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt rerum eaque velit hic quos quod debitis nesciunt dolore odio vitae temporibus aliquam autem quas harum, consequatur ab, sint voluptates dolores?</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Movies
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus recusandae neque quae eum cumque sint, nihil suscipit, nam quaerat necessitatibus aspernatur nemo deleniti. Quas ratione expedita fuga commodi quo nesciunt.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Books
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laboriosam dolores error in debitis facere repellat id. Sint, totam pariatur. Aspernatur quae impedit unde iste molestiae perspiciatis incidunt voluptatum iusto?</div>
+          </div>
+        </div>
+      </div>
+    <hr class="m-0">
+    <div>
+        <h2 class="text-center bg-dark text-white m-0">A few buttons</h2>
+    </div>
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <br>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <br>
+    </div>
+    <hr class="m-0">
+    <div>
+        <h2 class="text-center bg-dark text-white m-0">Button groups</h2>
+    </div>
+    <br/>
+    <div class="d-flex justify-content-center">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+            <button type="button" class="btn btn-outline-primary">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+    </div>
+    <br/>
+    <div>
+        <h2 class="text-center bg-dark text-white m-0">Cards</h2>
+    </div>
+    <br/>
+    <div class="container">
+        <div class="row justify-content-center g-3">
+          
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img src="https://billboard.com/wp-content/uploads/2023/01/Valentin-Elizalde-cr-Fonovisa-Records-espanol-2023-billboard-1548.jpg" class="card-img-top" alt="Image of Valentin Elizalde">
+              <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque ullam expedita ex recusandae ut quaerat laboriosam, facere explicabo autem, enim incidunt quisquam, tempore necessitatibus molestias beatae quia veniam saepe!</p>
+              </div>
+            </div>
+          </div>
+      
+          
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img src="https://img.ecartelera.com/noticias/75400/75480-h3.jpg" class="card-img-top" alt="Image of Shrek">
+              <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sit illo voluptatem dignissimos soluta vel minima ea, pariatur sapiente! Corrupti beatae, dignissimos vel a iure officia debitis consequatur eaque dolor!</p>
+              </div>
+            </div>
+          </div>
+      
+          
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img src="https://sm.ign.com/t/ign_latam/screenshot/default/malcolm-el-de-enmedio_k3t8.1280.jpg" class="card-img-top" alt="Image of Malcolm">
+              <div class="card-body">
+                <h5 class="card-title">Card 3</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rerum nulla dolores nemo sint, corrupti accusantium minima harum iste corporis modi tempore natus officiis autem consectetur animi quae beatae a.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br/>
+    <div>
+        <h2 class="text-center bg-dark text-white m-0">Modal</h2>
+    </div>
+    <br/>
+<!-- Button trigger modal -->
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Do not click
+        </button>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          I said do not click
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div>
+      <h2 class="text-center bg-dark text-white m-0">Popover</h2>
+  </div>
+  <br/>
+  <div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-lg btn-outline-info" data-bs-toggle="popover" data-bs-title="It was a joke" data-bs-content="Please close de popover">Click for more info</button>
+  </div>
+  <br/>
+  <div>
+      <h2 class="text-center bg-dark text-white m-0">Progress</h2>
+  </div>
+  <br/>
+  <h2 class="text-center">Loading progress bar please wait</h2>
+  <div class="progress w-75 mx-auto" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+  </div>  
+  <br/>
+  <div>
+      <h2 class="text-center bg-dark text-white m-0">Spinner</h2>
+  </div>
+  <br/>
+  <div class="d-flex align-items-center mx-5">
+    <strong role="status">Loading spinner please wait...</strong>
+    <div class="spinner-border ms-auto" aria-hidden="true"></div>
+</div>
+<br/>
+<div>
+    <h2 class="text-center bg-dark text-white m-0">Tooltips</h2>
+</div>
+<br/>
+<div class="container text-center">
+    <p class="m-0">
+      This is a text with a <span class="text-primary" data-bs-toggle="tooltip" title="Hi, have a good day">tooltip</span>.
+    </p>
+</div>
+<br/>
+<div>
+    <h2 class="text-center bg-dark text-white m-0">Icon link</h2>
+</div>
+<br/>
+    <div class="container text-center">
+        <a class="icon-link icon-link-hover" href="#" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+            <i class="bi bi-clipboard" aria-hidden="true"></i>
+            Icon link
+        </a> 
+                    
+    </div>
+    <br/>
+    <div>
+        <h2 class="text-center bg-dark text-white m-0">Floating labels</h2>
+    </div>
+    <br/>
+    <div class="form-floating mb-3 w-25 mx-auto">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Name</label>
+      </div>
+    <div>
+        <h2 class="text-center bg-primary bg-gradient text-white m-0">Background</h2>
+    </div>
+    <br/>
+    <br/>
+    <div>
+        <h2 class="text-center bg-dark text-white m-0 border border-danger">Borders</h2>
+    </div>
+    <br/>
+  
+     
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzWk5y8fIW6QXQKoV8y1RwPp2tkaWcZOugDe+zc/2pO1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script> //Popover
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl);
+        });
+      </script>
+      <script> //Tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      </script>
+      
+      
 </body>
 </html>
