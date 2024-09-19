@@ -45,14 +45,32 @@ function flatlander(width, height, x, y, isHappy) {
     // TODO: Update the x, y position using the this.speedX and this.speedY
     // values of the object. Make sure that when they reach an edge, they
     // bounce back.
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x <= 0 || this.x >= canvasWidth - this.width) {
+      this.speedX = -this.speedX;
+    }
+    if (this.y <= 0 || this.y >= canvasHeight - this.height) {
+      this.speedY = -this.speedY;
+    }
   };
   this.moreHappy = function () {
     // TODO: increase the happyPoints value and check if the isHappy flag
     // needs to be updated along with the image being displayed
+    this.happyPoints++;
+    if (this.happyPoints > 0 && !this.isHappy) {
+      this.isHappy = true;
+      this.image.src = happySrc;
+    }
   };
   this.lessHappy = function () {
     // TODO: decrease the happyPoints value and check if the isHappy flag
     // needs to be updated along with the image being displayed
+    this.happyPoints--;
+    if (this.happyPoints <= 0 && this.isHappy) {
+      this.isHappy = false;
+      this.image.src = sadSrc;
+    }
   };
   this.checkSurroundings = function (other) {
     var x = Math.pow(this.x - other.x, 2);
@@ -63,8 +81,14 @@ function flatlander(width, height, x, y, isHappy) {
 
 function startGame() {
   // TODO: make sure to get all the values from the screen
-  var n = 1;
-  var m = 1;
+  var n = parseInt(document.getElementById("num").value);
+  var m = parseInt(document.getElementById("sad").value);
+
+  if (isNaN(n) || isNaN(m) || n <= 0 || m < 0 || m > n) {
+    window.alert("Introduce valid values");
+    return;
+  }
+
   if (parseInt(m) > parseInt(n)) {
     window.alert("Can not have more sad than individuals.");
     return;
