@@ -86,4 +86,18 @@ app.post("/task/move/:index",(req,res)=>{
     res.redirect("/");
 });
 
+//Ruta put para postman
+app.put("/greet/:name",(req,res)=>{
+    const {name} = req.params;
+    if(name){
+        names.push(name);
+    }
+    res.json(names);
+});
+
+//Ruta get para postman
+app.get("/task",(req,res)=>{
+    res.json(tasks);
+});
+
 
