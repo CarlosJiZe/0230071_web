@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <% if (locals.error) { %>
+        <h3>
+            <%= error %>
+        </h3>
+        <% } %>
+            <form action="/greet" method="get">
+                Register:
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="submit" value="go next">
+            </form>
+
+        <h2>Greetings: </h2>
+        <ul>
+            <% names.forEach((name,index)=>{ %>
+                <li>
+                    <a href="/greet/<%=index%>"><%= name %></a>
+                </li>
+          <%  }); %>
+        </ul>
+        <br/>
+        <h2>TODO List</h2>
+        <ul>
+            <% tasks.forEach((task,index)=>{ %>
+                <li>
+                    <%= task %>
+                    <form action="/task/delete/<%= index %>" method="post" style="display: inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form action="/task/move/<%= index %>" method="post" style="display: inline;">
+                        <button type="submit" name="direction" value="up">
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                        <button type="submit" name="direction" value="down">
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+
+        <br/>
+
+        <form action="/task" method="post">
+            <input type="text" name="task" placeholder="New task" required>
+            <button type="submit">Add Task</button>
+        </form>
+</body>
+
+</html>
