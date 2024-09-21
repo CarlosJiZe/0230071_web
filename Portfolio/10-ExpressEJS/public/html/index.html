@@ -6,15 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <img src="../images/StarLion.png" alt="lion brewery" />
     <h1>Welcome to my landing page</h1>
-    <form>
+    <br/>
+    <form action="/loginhtml" method="get">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" />
-        <input type="submit" />
+        <input type="submit" value="Login (Get) HTML"/>
+    </form>
+    <br/>
+    <form action="/loginhtml" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Login (Post) HTML"/>
+    </form>
+    <br/>
+    <form action="/loginEJS" method="get">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Login (Get) EJS"/>
+    </form>
+    <br/>
+    <form action="/loginEJS" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Login (Post) EJS"/>
+    </form>
+    <br/>
+    <h2>Login for home</h2>
+    <form action="/login" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Login (Home)"/>
     </form>
 </body>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('header',{name:name}) %>
+    <p> You have log in by the <%= security %> method</p>
+    <h2>Post</h2>
+    <ul>
+        <% if(posts.length==0) { %>
+            <li>No posts available</li>
+        <% }else{ %>
+            <% posts.forEach((post,index)=> { %>
+                <li>
+                    <h3><%= post.title %></h3>
+                    <% if(post.content.length >100){ %>
+                        <p><%= post.content.substring(0,100) %>...</p>
+                    <% }else{ %>
+                        <p><%= post.content %></p>
+                    <% } %>
+                    <a href="/post/<%= index %>">Read more</a>
+                </li>
+            <% }) %> 
+        <% } %>       
+    </ul>
+
+    <h3>Add a new post</h3>
+    <form action="/addPost" method="post">
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title" required>
+        <br/>
+        <label for="content">Content:</label>
+        <br/>
+        <textarea name="content" id="content" rows="10" cols="40"></textarea>
+        <br/>
+        <button type="submit">Add</button>
+    </form>
+
+
+    <%- include('footer') %>
+    
+</body>
+</html>
