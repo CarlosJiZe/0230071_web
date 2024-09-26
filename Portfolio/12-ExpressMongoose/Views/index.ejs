@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo DB - F1 test</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<!--
+  url: String,
+  team: teamSchema,
+-->
+
+<body>
+    <img src="/images/StarLion.png" alt="lion brewery" />
+    <h1 class="wlc">Welcome to my F1 DB</h1>
+    <!-- Botón para alternar entre pilotos y equipos -->
+    <button id="toggle-button" onclick="toggleView()">Show Teams</button>
+    
+    <!-- Formulario de edición de conductores (solo se muestra en modo conductores) -->
+    <div id="edit-driver-form" style="display: block;">
+        <% if (driver) { %>
+            <h2 class="wlc">Edit Driver Information</h2>
+        <% } else { %>
+            <h2 class="wlc">Driver Information</h2>
+        <% } %>
+        <form action="/driver/update" method="POST" class="frm">
+            <!-- Campo oculto para identificar el número original -->
+            <input type="hidden" name="original_num" value="<%= driver ? driver.number : '' %>" />
+    
+            <label for="num">Number: </label>
+            <input type="text" name="num" id="num" value="<%= driver ? driver.number : '' %>" required />
+            <br/>
+    
+            <label for="code">Code: </label>
+            <input type="text" name="code" id="code" value="<%= driver ? driver.code : '' %>" required />
+            <br/>
+    
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" value="<%= driver ? driver.forename : '' %>" required />
+            <br/>
+    
+            <label for="lname">Last name: </label>
+            <input type="text" name="lname" id="lname" value="<%= driver ? driver.surname : '' %>" required />
+            <br />
+    
+            <label for="dob">Date of birth: </label>
+            <input type="date" name="dob" id="dob" value="<%= driver ? moment(driver.dob).format('YYYY-MM-DD') : '' %>" required />
+            <br/>
+    
+            <label for="url">Biography URL: </label>
+            <input type="url" name="url" id="url" value="<%= driver ? driver.url : '' %>" required />
+            <br />
+    
+            <label for="nationality">Nationality: </label>
+            <select name="nationality" id="nationality" required>
+                <% countries.forEach(country => { %>
+                    <option value="<%= country.code %>" <%= driver && driver.nationality === country.code ? 'selected' : '' %>><%= country.label %></option>
+                <% }) %> 
+            </select>
+            <br />
+    
+            <label for="team">Team: </label>
+            <select name="team" id="team" required>
+                <% teams.forEach(team => { %>
+                    <option value="<%= team.name %>" <%= driver && driver.team.name === team.name ? 'selected' : '' %>><%= team.name %></option>
+                <% }) %>
+            </select>
+            <br />
+    
+            <p>
+                <input type="submit" value="Save Changes" />
+            </p>
+        </form>
+    </div>
+    
+    <!-- Lista de pilotos -->
+    <div id="drivers-list" style="display: block;">
+        <h2 class="dyt">Drivers List</h2>
+        <ul class="dytul">
+            <% drivers.forEach(driver => { %>
+            <li>
+                <strong>Number:</strong> <%= driver.number %><br />
+                <strong>Code:</strong> <%= driver.code %><br />
+                <strong>Name:</strong> <%= driver.forename %> <%= driver.surname %><br />
+                <strong>Date of Birth:</strong> <%= moment(driver.dob).format("DD/MM/YYYY") %><br />
+                <strong>Nationality:</strong> <%= driver.nationality %><br />
+                <strong>Team:</strong> <%= driver.team.name %><br />
+                <strong>Biography:</strong> <%= driver.url %><br />
+                
+                <!-- Botón de edición -->
+                <a href="/?edit=<%= driver.number %>">
+                    <button class="edit-button">Edit</button>
+                </a>
+            </li>
+            <hr />
+            <% }) %>
+        </ul>
+    </div>
+    
+    <!-- Lista de equipos (oculta inicialmente) -->
+    <div id="teams-list" style="display: none;">
+        <h2 class="dyt">Teams List</h2>
+        <ul class="dytul">
+            <% teams.forEach(team => { %>
+            <li>
+                <strong>Name:</strong> <%= team.name %><br />
+                <strong>Nationality:</strong> <%= team.nationality %><br />
+                <strong>URL:</strong> <%= team.url %> <br />
+            </li>
+            <hr />
+            <% }) %>
+        </ul>
+    </div>
+    
+    <script>
+        let showingDrivers = true;
+    
+        function toggleView() {
+            const driversList = document.getElementById("drivers-list");
+            const teamsList = document.getElementById("teams-list");
+            const editDriverForm = document.getElementById("edit-driver-form");
+            const toggleButton = document.getElementById("toggle-button");
+    
+            if (showingDrivers) {
+                driversList.style.display = "none";
+                editDriverForm.style.display = "none";
+                teamsList.style.display = "block";
+                toggleButton.innerText = "Show Drivers";
+            } else {
+                driversList.style.display = "block";
+                editDriverForm.style.display = "block";
+                teamsList.style.display = "none";
+                toggleButton.innerText = "Show Teams";
+            }
+    
+            showingDrivers = !showingDrivers;
+        }
+    </script>
+    
+</body>
+
+</html>
