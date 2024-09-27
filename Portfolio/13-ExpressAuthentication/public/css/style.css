@@ -42,3 +42,29 @@ input[type=text]:focus {
         1px -1px 0 #000,
         -1px -1px 0 #000;
 }
+
+.imgl{
+    padding-left: 35%;
+    padding-right: 35%;
+    width: 30%;
+}
+
+.wlc{
+    text-align: center;
+}
+
+.frm{
+    text-align: center;
+    font-size: 20px;
+}
+
+.cont{
+    width: 25%;
+    padding-left: 40%;
+    padding-right: 35%;
+    text-align: left;
+}
+
+#iglo{
+    padding-left: 49%;
+}
