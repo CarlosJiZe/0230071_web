@@ -1,14 +1,12 @@
-// MovieCard.js
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function MovieCard({ movie, onShowCharacter }) {
+function MovieCard({ movie, onToggle, isExpanded }) {
   const [hover, setHover] = useState(false);
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
 
-  // Determinar el color de borde según afiliación
   const borderColor = (movie.best_character.affiliation === 'Sith' || movie.best_character.affiliation === 'Empire') ? 'red' : 'blue';
 
   return (
@@ -31,12 +29,8 @@ function MovieCard({ movie, onShowCharacter }) {
           <Card.Subtitle className="mb-2 text-muted">{movie.year}</Card.Subtitle>
         </div>
         <div>
-          {/* Verifica que el personaje se pasa correctamente al hacer clic */}
-          <Button variant="primary" onClick={() => {
-            console.log("Personaje seleccionado:", movie.best_character);
-            onShowCharacter(movie.best_character);
-          }}>
-            More...
+          <Button variant="primary" onClick={onToggle}>
+            {isExpanded ? 'Less' : 'More'}
           </Button>
           <div className="mt-2">
             <Button variant="outline-success" onClick={() => setLikes(likes + 1)}>👍 {likes}</Button>
@@ -49,5 +43,6 @@ function MovieCard({ movie, onShowCharacter }) {
 }
 
 export default MovieCard;
+
 
 

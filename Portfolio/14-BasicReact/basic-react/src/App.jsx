@@ -5,8 +5,8 @@ import CharacterDetails from './components/CharacterDetails';
 import sw from './data/data.js';
 
 function App() {
-  const [selectedMovie, setSelectedMovie] = useState(null);
-  const [comments, setComments] = useState({}); // Objeto para almacenar comentarios por película
+  const [expandedMovie, setExpandedMovie] = useState(null); // Almacena la película expandida
+  const [comments, setComments] = useState({});
 
   const addComment = (episode, newComment) => {
     setComments((prevComments) => ({
@@ -15,26 +15,41 @@ function App() {
     }));
   };
 
+  // Maneja el clic para alternar entre expandir y colapsar
+  const handleToggle = (movie) => {
+    setExpandedMovie((prev) => (prev?.episode === movie.episode ? null : movie));
+  };
+
   return (
     <div className="container">
       <div className="row g-4">
         {sw.map((movie) => (
-          <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center" key={movie.episode}>
-            <MovieCard movie={movie} onShowCharacter={() => setSelectedMovie(movie)} />
-          </div>
+          <React.Fragment key={movie.episode}>
+            <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              <MovieCard 
+                movie={movie} 
+                onToggle={() => handleToggle(movie)} // Alterna el estado expandido
+                isExpanded={expandedMovie?.episode === movie.episode} // Controla el estado expandido
+              />
+            </div>
+            
+            {expandedMovie?.episode === movie.episode && (
+              <div className="col-12">
+                <CharacterDetails 
+                  character={expandedMovie.best_character} 
+                  comments={comments[expandedMovie.episode] || []} 
+                  onAddComment={(newComment) => addComment(expandedMovie.episode, newComment)} 
+                />
+              </div>
+            )}
+          </React.Fragment>
         ))}
       </div>
-
-      {selectedMovie && (
-        <CharacterDetails 
-          character={selectedMovie.best_character} 
-          comments={comments[selectedMovie.episode] || []} 
-          onAddComment={(newComment) => addComment(selectedMovie.episode, newComment)} 
-        />
-      )}
     </div>
   );
 }
 
 export default App;
+
+
 
